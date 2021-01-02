@@ -26,7 +26,7 @@
         <LeftNav />
       </v-card>
       <v-row no-gutters>
-        <v-col class="col-12 pt-7 main-content">
+        <v-col class="col-12 pt-7 main-content pr-6">
           <router-view></router-view>
         </v-col>
       </v-row>
@@ -34,9 +34,9 @@
   </v-app>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
-import LeftNav from "./components/LeftNav.vue";
+import LeftNav from "./components/leftnav/LeftNav";
 import "./sass/main.scss";
 
 export default Vue.extend({

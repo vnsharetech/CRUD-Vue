@@ -26,8 +26,12 @@ export default Vue.extend({
     items: [
       { text: "Home", icon: "mdi-home", link: "/" },
       { text: "About Us", icon: "mdi-information", link: "/about" },
-      { text: "Products", icon: "mdi-package-variant-closed", link: "" },
-      { text: "Contact Us", icon: "mdi-contacts", link: "" },
+      {
+        text: "Products",
+        icon: "mdi-package-variant-closed",
+        link: "/products",
+      },
+      { text: "Contact Us", icon: "mdi-contacts", link: "/contact" },
     ],
   }),
   methods: {
