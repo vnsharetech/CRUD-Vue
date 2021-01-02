@@ -1,57 +1,49 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
-          alt="Vuetify Logo"
+          alt="BBkids Nha Trang"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="images/bbkids.png"
           transition="scale-transition"
-          width="40"
+          width="80"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <span class="ml-2">BB Kids Nha Trang</span>
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn href="#" text>
+        <span class="mr-2">Login</span>
+        <v-icon>mdi-login-variant</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <v-card elevation="2" class="left-nav pt-3">
+        <LeftNav />
+      </v-card>
+      <v-row no-gutters>
+        <v-col class="col-12 pt-7 main-content pr-6">
+          <router-view></router-view>
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import Vue from "vue";
+import LeftNav from "./components/leftnav/LeftNav";
+import "./sass/main.scss";
 
 export default Vue.extend({
-  name: 'App',
+  name: "App",
 
   components: {
-    HelloWorld,
+    LeftNav,
   },
 
   data: () => ({

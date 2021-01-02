@@ -1,0 +1,14 @@
+.left-nav.v-card{
+    width: 300px;
+    position: absolute;
+    left:0px;
+    top:0px;
+    z-index: 2;
+    height: 100%;
+    a{
+        text-decoration: none;
+    }
+  }
+  .main-content{
+    padding-left: 324px !important;
+  }
