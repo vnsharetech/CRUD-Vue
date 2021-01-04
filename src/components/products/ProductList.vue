@@ -146,9 +146,9 @@ export default {
 
     initialize() {
       //dispatch function setProduct to set products into store
-      this.$store.dispatch("ProductStore/setProducts");
+      this.$store.dispatch("Product/setProducts");
       //get products from store
-      this.products = this.$store.state.ProductStore.products;
+      this.products = this.$store.state.Product.products;
     },
 
     filterOnlyCapsText(value, search, item) {
@@ -173,7 +173,7 @@ export default {
     },
 
     deleteItemConfirm() {
-      this.$store.dispatch("ProductStore/deleteProduct", this.editedIndex);
+      this.$store.dispatch("Product/deleteProduct", this.editedIndex);
       this.closeDelete();
     },
 
@@ -199,9 +199,9 @@ export default {
           index: this.editedIndex,
           editedItem: this.editedItem,
         };
-        this.$store.dispatch("ProductStore/updateProduct", data);
+        this.$store.dispatch("Product/updateProduct", data);
       } else {
-        this.$store.dispatch("ProductStore/addNewProduct", this.editedItem);
+        this.$store.dispatch("Product/addNewProduct", this.editedItem);
       }
       this.close();
     },
